@@ -20,7 +20,7 @@ class Todo extends React.Component {
 
     addTask = ({key}) => {
         const {taskText} = this.state 
-        if (taskText.length > 3 && key === 'Enter') {
+        if (key === 'Enter') {
             const {addTask} = this.props;
 
             addTask((new Date()).getTime(), taskText, false)
